@@ -6,7 +6,12 @@
     "baseUrl": ".",
     "moduleResolution": "Node",
     "paths": {
-      "@/*": ["./src/*"]
+      "@/*": ["./src/*"],
+      "@assets/*": ["./src/assets/*"],
+      "@pages/*": ["./src/pages/*"],
+      "@router/*": ["./src/router/*"],
+      "@store/*": ["./src/store/*"],
+      "@components/*": ["./src/components/*"]
     },
     "types": [
       "vite-plugin-vue-layouts/client",
