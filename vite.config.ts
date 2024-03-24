@@ -11,6 +11,7 @@ import VueRouter from 'unplugin-vue-router/vite'
 import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
+import { viteMockServe } from 'vite-plugin-mock'
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
@@ -61,6 +62,10 @@ export default defineConfig({
     vueJsx(),
     VueDevTools(),
     UnoCSS(),
+    viteMockServe({
+      mockPath: 'mock',
+      enable: true,
+    }),
   ],
   resolve: {
     alias: {

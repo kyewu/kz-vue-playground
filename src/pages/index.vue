@@ -1,8 +1,8 @@
 <template>
-  home index
+  Home page
 </template>
 
 <route lang="yaml">
 meta:
-  layout: home
+  layout: default
 </route>
