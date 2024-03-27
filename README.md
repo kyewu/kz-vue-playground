@@ -1,4 +1,4 @@
-## kz-vue-template
+## kz-vue-playground
 This is a template with vue3.4x.
 
 ## Plugins
