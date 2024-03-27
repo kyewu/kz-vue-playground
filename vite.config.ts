@@ -1,5 +1,6 @@
 import { URL, fileURLToPath } from 'node:url'
 
+import path from 'node:path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueJsx from '@vitejs/plugin-vue-jsx'
@@ -12,10 +13,15 @@ import Components from 'unplugin-vue-components/vite'
 import AutoImport from 'unplugin-auto-import/vite'
 import { VueRouterAutoImports } from 'unplugin-vue-router'
 import { viteMockServe } from 'vite-plugin-mock'
+
 // https://vitejs.dev/config/
 export default defineConfig({
   server: {
     port: 4210,
+    watch: {
+      usePolling: true,
+      interval: 1000,
+    },
   },
   plugins: [
     VueRouter({
@@ -70,11 +76,11 @@ export default defineConfig({
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
-      '@assets/*': fileURLToPath(new URL('./src/assets/*', import.meta.url)),
-      '@pages/*': fileURLToPath(new URL('./src/pages/*', import.meta.url)),
-      '@router/*': fileURLToPath(new URL('./src/router/*', import.meta.url)),
-      '@store/*': fileURLToPath(new URL('./src/store/*', import.meta.url)),
-      '@components/*': fileURLToPath(new URL('./src/components/*', import.meta.url)),
+      '@assets': path.resolve(__dirname, 'src/assets'),
+      '@pages': fileURLToPath(new URL('./src/pages', import.meta.url)),
+      '@router': fileURLToPath(new URL('./src/router', import.meta.url)),
+      '@store': fileURLToPath(new URL('./src/store', import.meta.url)),
+      '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
     },
   },
 })
