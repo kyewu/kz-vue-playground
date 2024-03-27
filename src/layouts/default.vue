@@ -1,3 +1,7 @@
+<script setup lang="ts">
+
+</script>
+
 <template>
   <Menu />
   <main px-4 py-10 flex-1>
