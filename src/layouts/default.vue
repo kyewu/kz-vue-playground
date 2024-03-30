@@ -5,7 +5,7 @@ const { y } = useWindowScroll()
 </script>
 
 <template>
-  <div fixed top-0 w-full bg-black :class="{ ' shadow-lg': y > 0 }">
+  <div fixed top-0 w-full bg-black z-36 :class="{ ' shadow-lg': y > 0 }">
     <Container>
       <img w-40 h-full filter-invert :src="Logo" alt="logo">
       <Menu />
