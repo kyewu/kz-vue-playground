@@ -1,5 +1,8 @@
+<script setup lang="ts">
+</script>
+
 <template>
-  Study page
+  <Carousel />
 </template>
 
   <route lang="yaml">

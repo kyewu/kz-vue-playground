@@ -18,10 +18,7 @@ import { viteMockServe } from 'vite-plugin-mock'
 export default defineConfig({
   server: {
     port: 4210,
-    watch: {
-      usePolling: true,
-      interval: 1000,
-    },
+    hmr: true,
   },
   plugins: [
     VueRouter({
