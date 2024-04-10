@@ -1,11 +1,4 @@
-<script setup lang="ts">
-</script>
-
-<template>
-  <Carousel />
-</template>
-
-  <route lang="yaml">
+<route lang="yaml">
   meta:
     layout: default
   </route>
