@@ -21,7 +21,8 @@
 
 <style scoped lang="scss">
 .route-items {
-    @apply relative text-white text-xl px-8 py-2 font-300 cursor-pointer;
+  font-size: 12px;
+    @apply relative text-black text-4 px-8 py-4 font-serif font-300 cursor-pointer;
 
     &:hover {
         @apply font-500 shadow-sm;

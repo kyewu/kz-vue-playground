@@ -1,29 +1,46 @@
 <script setup lang="ts">
 import Logo from '@/assets/imgs/logo.png'
 import type { SwiperItemType } from '@/components/types'
-import banner from '@/assets/imgs/banner_1.jpg'
+import banner1 from '@/assets/imgs/banner/banner_0.jpg'
+import banner2 from '@/assets/imgs/banner/banner_1.jpg'
+import banner3 from '@/assets/imgs/banner/banner_2.jpg'
+import banner4 from '@/assets/imgs/banner/banner_3.jpg'
+import banner5 from '@/assets/imgs/banner/banner_4.jpg'
+import banner6 from '@/assets/imgs/banner/banner_5.jpg'
 
 const items: SwiperItemType[] = [
   {
-    image: banner,
+    image: banner1,
     title: 'title',
     subTitle: 'subTitle',
     desc: 'desc',
   },
   {
-    image: banner,
+    image: banner2,
     title: 'title',
     subTitle: 'subTitle',
     desc: 'desc',
   },
   {
-    image: banner,
+    image: banner3,
     title: 'title',
     subTitle: 'subTitle',
     desc: 'desc',
   },
   {
-    image: banner,
+    image: banner4,
+    title: 'title',
+    subTitle: 'subTitle',
+    desc: 'desc',
+  },
+  {
+    image: banner5,
+    title: 'title',
+    subTitle: 'subTitle',
+    desc: 'desc',
+  },
+  {
+    image: banner6,
     title: 'title',
     subTitle: 'subTitle',
     desc: 'desc',
@@ -34,15 +51,19 @@ const { y } = useWindowScroll()
 </script>
 
 <template>
-  <div fixed top-0 w-full bg-black z-36 :class="{ ' shadow-lg': y > 0 }">
-    <Container>
-      <img w-40 h-full filter-invert :src="Logo" alt="logo">
+  <div fixed top-0 w-full bg-white z-36 :class="{ ' shadow-lg': y > 0 }">
+    <Container :dynamic="true">
+      <img w-40 h-full :src="Logo" alt="logo">
       <Menu />
     </Container>
   </div>
-  <main py-10 flex-1 min-h-500 overflow-y-auto>
-    <Carousel :items="items" />
-    <RouterView px-4 />
+  <main py-14 flex-1 overflow-y-auto>
+    <Container>
+      <Carousel :items="items" />
+    </Container>
+    <Container>
+      <RouterView />
+    </Container>
   </main>
   <footer>Footer</footer>
 </template>
