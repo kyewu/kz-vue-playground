@@ -11,7 +11,8 @@
       "@pages/*": ["./src/pages/*"],
       "@router/*": ["./src/router/*"],
       "@store/*": ["./src/store/*"],
-      "@components/*": ["./src/components/*"]
+      "@components/*": ["./src/components/*"],
+      "@utils/*": ["./src/utils/*"]
     },
     "types": [
       "vite-plugin-vue-layouts/client",

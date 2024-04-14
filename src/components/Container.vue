@@ -10,7 +10,7 @@ const widthClass = computed(() => {
 </script>
 
 <template>
-  <div :class="widthClass" flex mx-auto justify-start items-center>
+  <div :class="widthClass" flex mx-auto justify-start items-center flex-col>
     <slot />
   </div>
 </template>

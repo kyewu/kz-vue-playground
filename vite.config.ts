@@ -59,7 +59,7 @@ export default defineConfig({
         },
       ],
       dts: 'src/auto-imports.d.ts',
-      dirs: ['src/composables', 'src/stores'], // Auto import for module exports under directories
+      dirs: ['src/composables', 'src/stores', 'src/utils'], // Auto import for module exports under directories
       vueTemplate: true, // Auto import inside Vue template
     }),
     vueJsx(),
@@ -78,6 +78,7 @@ export default defineConfig({
       '@router': fileURLToPath(new URL('./src/router', import.meta.url)),
       '@store': fileURLToPath(new URL('./src/store', import.meta.url)),
       '@components': fileURLToPath(new URL('./src/components', import.meta.url)),
+      '@utils': fileURLToPath(new URL('./src/utils', import.meta.url)),
     },
   },
 })

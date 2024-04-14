@@ -22,14 +22,16 @@ const cardClass = computed(() => {
 <template>
   <div :class="cardClass">
     <header
-      v-if="card.image" :class="imgHeight" w-full bg-no-repeat bg-center bg-cover
+      v-if="card.image" :class="imgHeight" w-full bg-no-repeat bg-center bg-cover mb-2 flex justify-end items-start
       :style="{ backgroundImage: `url(${card.image})` }"
-    />
-    <section v-if="card.title" class="body" my-0.5 px-2 h-10>
+    >
+      <img v-if="card.tag" :src="getImagePath('icon-new.png')" alt="icon" w-14 h-6.25>
+    </header>
+    <section v-if="card.title" class="body" my-0.5 px-2 min-h-10>
       <p class="text-[#545c63]" font-300 line-clamp-2 line-height-5 hover:font-500 text-14px>
         {{ card.title }}
       </p>
-      <slot :item="{ ...card }" />
+      <slot :card="{ ...card }" />
     </section>
   </div>
 </template>
