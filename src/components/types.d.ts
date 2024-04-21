@@ -23,3 +23,9 @@ export interface LineType {
   stepsCount?: number
   collectionCount?: number
 }
+
+export interface MenuItemType {
+  link?: RouteLocationRaw
+  name?: string
+  iconClass?: string
+}

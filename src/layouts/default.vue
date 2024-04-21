@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import Logo from '@/assets/imgs/logo.png'
-import type { SwiperItemType } from '@/components/types'
+import type { MenuItemType, SwiperItemType } from '@/components/types'
 import banner1 from '@/assets/imgs/banner/banner_0.jpg'
 import banner2 from '@/assets/imgs/banner/banner_1.jpg'
 import banner3 from '@/assets/imgs/banner/banner_2.jpg'
@@ -47,6 +47,13 @@ const items: SwiperItemType[] = [
   },
 ]
 
+const menuList: MenuItemType[] = [
+  { name: '产品', link: '/' },
+  { name: '社区', link: '/community' },
+  { name: '学习', link: '/study' },
+  { name: '关于', link: '/about' },
+]
+
 const { y } = useWindowScroll()
 </script>
 
@@ -54,7 +61,7 @@ const { y } = useWindowScroll()
   <div fixed top-0 w-full bg-white z-36 :class="{ ' shadow-lg': y > 0 }">
     <Container :dynamic="true">
       <img w-40 h-full :src="Logo" alt="logo">
-      <Menu />
+      <Menu :menu="menuList" />
     </Container>
   </div>
   <main py-14 flex-1 overflow-y-auto>
@@ -65,5 +72,5 @@ const { y } = useWindowScroll()
       <RouterView />
     </Container>
   </main>
-  <footer>Footer</footer>
+  <DefaultFooter />
 </template>

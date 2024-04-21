@@ -18,7 +18,6 @@ import { viteMockServe } from 'vite-plugin-mock'
 export default defineConfig({
   server: {
     port: 4210,
-    hmr: true,
   },
   plugins: [
     VueRouter({
