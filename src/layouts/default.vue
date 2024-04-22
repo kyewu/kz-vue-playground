@@ -64,13 +64,13 @@ const { y } = useWindowScroll()
       <Menu :menu="menuList" />
     </Container>
   </div>
-  <main py-14 flex-1 overflow-y-auto>
+  <main pt-14 flex-1 overflow-y-auto>
     <Container>
       <Carousel :items="items" />
     </Container>
     <Container>
       <RouterView />
     </Container>
+    <DefaultFooter />
   </main>
-  <DefaultFooter />
 </template>
