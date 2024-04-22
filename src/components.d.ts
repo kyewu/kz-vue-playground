@@ -12,7 +12,6 @@ declare module 'vue' {
     Carousel: typeof import('./components/Carousel.vue')['default']
     Container: typeof import('./components/Container.vue')['default']
     DefaultFooter: typeof import('./components/DefaultFooter.vue')['default']
-    Footer: typeof import('./components/Footer.vue')['default']
     Menu: typeof import('./components/Menu.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
